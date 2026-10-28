@@ -1,0 +1,142 @@
+TAP version 13
+# Subtest: Pi cancellation forwards abort, retains partial output, and disposes the child
+ok 1 - Pi cancellation forwards abort, retains partial output, and disposes the child
+  ---
+  duration_ms: 11.921324
+  type: 'test'
+  ...
+# Subtest: Pi hard deadline interrupts even if the provider never returns
+ok 2 - Pi hard deadline interrupts even if the provider never returns
+  ---
+  duration_ms: 14.887797
+  type: 'test'
+  ...
+# Subtest: a cancelled slow startup cannot send a late model prompt
+ok 3 - a cancelled slow startup cannot send a late model prompt
+  ---
+  duration_ms: 65.250562
+  type: 'test'
+  ...
+# Subtest: unexpected process death is detected without waiting for the full task deadline
+ok 4 - unexpected process death is detected without waiting for the full task deadline
+  ---
+  duration_ms: 1001.526743
+  type: 'test'
+  ...
+# Subtest: captures the exact body rather than a differently named publication file
+ok 5 - captures the exact body rather than a differently named publication file
+  ---
+  duration_ms: 7.594738
+  type: 'test'
+  ...
+# Subtest: an independent exact-body review is required, and a changed report invalidates it
+ok 6 - an independent exact-body review is required, and a changed report invalidates it
+  ---
+  duration_ms: 8.756039
+  type: 'test'
+  ...
+# Subtest: edited proof body, goal or input cannot retain a valid review
+ok 7 - edited proof body, goal or input cannot retain a valid review
+  ---
+  duration_ms: 5.439927
+  type: 'test'
+  ...
+# Subtest: conflicting independent reviews stay disputed
+ok 8 - conflicting independent reviews stay disputed
+  ---
+  duration_ms: 4.939935
+  type: 'test'
+  ...
+# Subtest: dependency invalidation propagates transitively
+ok 9 - dependency invalidation propagates transitively
+  ---
+  duration_ms: 3.203511
+  type: 'test'
+  ...
+# Subtest: task dependencies are honored and concurrent tasks have separate directories and sessions
+ok 10 - task dependencies are honored and concurrent tasks have separate directories and sessions
+  ---
+  duration_ms: 4.399241
+  type: 'test'
+  ...
+# Subtest: changed evidence prevents dispatch before a provider is called
+ok 11 - changed evidence prevents dispatch before a provider is called
+  ---
+  duration_ms: 1.452851
+  type: 'test'
+  ...
+# Subtest: interruption is saved, resume reuses the durable session without duplicating completed work
+ok 12 - interruption is saved, resume reuses the durable session without duplicating completed work
+  ---
+  duration_ms: 2.899768
+  type: 'test'
+  ...
+# Subtest: cancel reaches an active task and leaves a resumable attempt
+ok 13 - cancel reaches an active task and leaves a resumable attempt
+  ---
+  duration_ms: 2.106477
+  type: 'test'
+  ...
+# Subtest: resume preserves consumed budget and only explicit additions extend it
+ok 14 - resume preserves consumed budget and only explicit additions extend it
+  ---
+  duration_ms: 1.942487
+  type: 'test'
+  ...
+# Subtest: a second live campaign cannot take ownership
+ok 15 - a second live campaign cannot take ownership
+  ---
+  duration_ms: 1.442453
+  type: 'test'
+  ...
+# Subtest: crash recovery charges time through the last heartbeat, not the offline interval
+ok 16 - crash recovery charges time through the last heartbeat, not the offline interval
+  ---
+  duration_ms: 1.240067
+  type: 'test'
+  ...
+# Subtest: a changed completed dependency cannot silently feed the next task
+ok 17 - a changed completed dependency cannot silently feed the next task
+  ---
+  duration_ms: 3.002017
+  type: 'test'
+  ...
+# Subtest: missing Pi history falls back to the explicit saved handoff
+ok 18 - missing Pi history falls back to the explicit saved handoff
+  ---
+  duration_ms: 2.17659
+  type: 'test'
+  ...
+# Subtest: parallel state writers serialize and immutable reports expose actual scope
+ok 19 - parallel state writers serialize and immutable reports expose actual scope
+  ---
+  duration_ms: 4.632961
+  type: 'test'
+  ...
+# Subtest: objective revisions invalidate historical results instead of rewriting them
+ok 20 - objective revisions invalidate historical results instead of rewriting them
+  ---
+  duration_ms: 1.12875
+  type: 'test'
+  ...
+# Subtest: recording a worker output carries its actual producer and input provenance
+ok 21 - recording a worker output carries its actual producer and input provenance
+  ---
+  duration_ms: 2.884973
+  type: 'test'
+  ...
+# Subtest: command parser rejects missing budgets and supports explicit additions
+ok 22 - command parser rejects missing budgets and supports explicit additions
+  ---
+  duration_ms: 0.200705
+  type: 'test'
+  ...
+1..22
+# tests 22
+# suites 0
+# pass 22
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 1471.940223

@@ -1,0 +1,4 @@
+{
+  "objective": "A computation suggests n^2+n+17 is prime for every nonnegative integer n. Investigate the conjecture from raw materials, write a justified conclusion with exact scope, and preserve a reproducible check.",
+  "files": { "observations.txt": "The first sixteen values, for n=0 through 15, were reported prime. This is a historical observation, not a proof.\n" }
+}

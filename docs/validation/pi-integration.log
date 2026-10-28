@@ -1,0 +1,13 @@
+{
+  "pi": "1.4.0",
+  "realToolLoop": true,
+  "sessionResume": true,
+  "pluginAndSevenSkillsLoaded": true,
+  "headlessRecordAndPause": true,
+  "independentTaskDispatch": true,
+  "hardDeadline": true,
+  "roundBudget": true,
+  "packagedPlugin": true,
+  "providerRequests": 20,
+  "externalModelCalls": 0
+}

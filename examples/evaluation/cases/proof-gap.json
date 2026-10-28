@@ -1,0 +1,4 @@
+{
+  "objective": "Audit the proposed proof in draft.md. Establish whether its theorem is true, identify the decisive inference, and deliver a corrected result or an explicit obstruction. Do not silently change the hypotheses.",
+  "files": { "draft.md": "Claim: Every subadditive function f on the positive integers with f(1)=1 satisfies f(n)<n for all n>1. Proposed proof: by induction, f(n+1)<=f(n)+f(1)<n+1. The base n=2 is clear by subadditivity.\n" }
+}

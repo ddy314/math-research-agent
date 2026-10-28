@@ -1,20 +1,64 @@
 {
-  "name": "math-research-agent",
-  "version": "0.1.0",
-  "private": true,
+  "name": "@math-research-agent/pi-research",
+  "version": "0.2.0",
+  "description": "Long-horizon mathematical research skills and orchestration for Pi",
   "type": "module",
-  "packageManager": "pnpm@11.7.0",
+  "license": "MIT",
   "engines": {
-    "node": ">=22"
+    "node": ">=22.19.0"
+  },
+  "keywords": [
+    "pi-package",
+    "mathematics",
+    "research",
+    "agent-skills"
+  ],
+  "files": [
+    "dist/src",
+    "dist/extensions",
+    "skills",
+    "prompts",
+    "README.md",
+    "LICENSE",
+    "examples/evaluation",
+    "docs/VALIDATION.md"
+  ],
+  "bin": {
+    "math-research": "dist/src/cli.js"
+  },
+  "exports": {
+    ".": "./dist/src/index.js"
+  },
+  "pi": {
+    "extensions": [
+      "./dist/extensions/research.js"
+    ],
+    "skills": [
+      "./skills"
+    ]
   },
   "scripts": {
-    "build": "pnpm run build:proof && pnpm run build:gui",
-    "build:proof": "pnpm --filter @math-research-agent/backend run build",
-    "build:gui": "pnpm --filter @math-research-agent/proof-workbench run check",
-    "typecheck": "pnpm --filter @math-research-agent/backend run typecheck",
-    "test:proof": "pnpm --filter @math-research-agent/backend run test",
-    "corpus": "pnpm --filter @math-research-agent/backend run corpus",
-    "start": "pnpm --dir apps/proof-workbench run serve",
-    "start:api": "pnpm --dir apps/proof-workbench run serve -- --api-only"
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "test": "npm run build && node --test dist/test/*.test.js",
+    "check": "npm run typecheck && npm test",
+    "start": "node dist/src/cli.js",
+    "smoke:pi": "npm run build && node dist/test/pi-smoke.js",
+    "benchmark": "node dist/src/benchmark.js",
+    "prepack": "npm run build"
+  },
+  "peerDependencies": {
+    "@earendil-works/pi-coding-agent": ">=1.4.0 <1.5.0",
+    "typebox": "^1.3.27"
+  },
+  "devDependencies": {
+    "@earendil-works/pi-coding-agent": "1.4.0",
+    "@types/node": "^22.19.0",
+    "typescript": "^5.9.3",
+    "typebox": "1.3.27"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dongxuelian2/math-research-agent.git"
   }
 }

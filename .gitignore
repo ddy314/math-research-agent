@@ -18,6 +18,7 @@ projects/
 .env
 .env.*
 !configs/.env.example
+!docs/legacy/configs/.env.example
 configs/*.local.json
 configs/*.local.toml
 *.pem
@@ -25,6 +26,12 @@ configs/*.local.toml
 service-account*.json
 /*.json
 !/package.json
+!/package-lock.json
+!/tsconfig.json
+
+# Current file-based research projects and temporary evaluation runs
+.math-research/
+research/
 
 # Logs & temporary run files
 logs/

@@ -1,0 +1,4 @@
+{
+  "objective": "For positive integers a,b, investigate the invariant of repeatedly replacing the larger of a,b by its difference with the smaller. Use exact experiments to form a precise conjecture, then prove termination and identify the final equal pair. Include all boundary cases and reusable code.",
+  "files": { "notes.md": "A few trials end at (1,1), but no general statement or proof has been established.\n" }
+}

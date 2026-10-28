@@ -1,0 +1,7 @@
+{
+  "objective": "Continue this rational-expansion research from its existing notes. Identify what is established, avoid repeating a falsified conjecture, and prove a useful next statement about which reduced rational numbers have terminating decimal expansions.",
+  "files": {
+    "PROGRESS.md": "Established: if q=2^a*5^b, every reduced p/q has a terminating decimal expansion, by scaling to a power of ten. Open: necessity for arbitrary q. Failed claim: every prime denominator gives a nonterminating expansion. Counterexample saved separately. Next possible mechanism: a terminating expansion implies q divides a power of ten; prove why reduction matters.\n",
+    "counterexample.txt": "1/2=0.5. Thus the unqualified prime-denominator claim is false.\n"
+  }
+}

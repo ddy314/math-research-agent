@@ -1,0 +1,281 @@
+{
+  "@math-research-agent/pi-research": {
+    "id": "@math-research-agent/pi-research@0.2.0",
+    "name": "@math-research-agent/pi-research",
+    "version": "0.2.0",
+    "size": 46624,
+    "unpackedSize": 178372,
+    "shasum": "40a29ef75bd184571fbab2542ee5cffbb89e90de",
+    "integrity": "sha512-Z/ue+H5L/DJR5jlpwFjJNWMYl4NlT0ndkMM9RSVvIH4ebt2fD18bNBa+hLy+JW+G/9jZR9wA4bFFyB2boxX3UA==",
+    "filename": "math-research-agent-pi-research-0.2.0.tgz",
+    "files": [
+      {
+        "path": "LICENSE",
+        "size": 1101,
+        "mode": 420
+      },
+      {
+        "path": "README.md",
+        "size": 9244,
+        "mode": 420
+      },
+      {
+        "path": "dist/extensions/research.d.ts",
+        "size": 136,
+        "mode": 420
+      },
+      {
+        "path": "dist/extensions/research.js",
+        "size": 13175,
+        "mode": 420
+      },
+      {
+        "path": "dist/extensions/research.js.map",
+        "size": 13898,
+        "mode": 420
+      },
+      {
+        "path": "dist/src/benchmark.d.ts",
+        "size": 31,
+        "mode": 420
+      },
+      {
+        "path": "dist/src/benchmark.js",
+        "size": 4334,
+        "mode": 420
+      },
+      {
+        "path": "dist/src/benchmark.js.map",
+        "size": 4639,
+        "mode": 420
+      },
+      {
+        "path": "dist/src/cli.d.ts",
+        "size": 82,
+        "mode": 420
+      },
+      {
+        "path": "dist/src/cli.js",
+        "size": 5495,
+        "mode": 420
+      },
+      {
+        "path": "dist/src/cli.js.map",
+        "size": 5600,
+        "mode": 420
+      },
+      {
+        "path": "dist/src/commands.d.ts",
+        "size": 216,
+        "mode": 420
+      },
+      {
+        "path": "dist/src/commands.js",
+        "size": 1085,
+        "mode": 420
+      },
+      {
+        "path": "dist/src/commands.js.map",
+        "size": 1312,
+        "mode": 420
+      },
+      {
+        "path": "dist/src/coordinator.d.ts",
+        "size": 971,
+        "mode": 420
+      },
+      {
+        "path": "dist/src/coordinator.js",
+        "size": 11785,
+        "mode": 420
+      },
+      {
+        "path": "dist/src/coordinator.js.map",
+        "size": 11205,
+        "mode": 420
+      },
+      {
+        "path": "dist/src/index.d.ts",
+        "size": 184,
+        "mode": 420
+      },
+      {
+        "path": "dist/src/index.js",
+        "size": 217,
+        "mode": 420
+      },
+      {
+        "path": "dist/src/index.js.map",
+        "size": 233,
+        "mode": 420
+      },
+      {
+        "path": "dist/src/paths.d.ts",
+        "size": 169,
+        "mode": 420
+      },
+      {
+        "path": "dist/src/paths.js",
+        "size": 503,
+        "mode": 420
+      },
+      {
+        "path": "dist/src/paths.js.map",
+        "size": 526,
+        "mode": 420
+      },
+      {
+        "path": "dist/src/pi-executor.d.ts",
+        "size": 1091,
+        "mode": 420
+      },
+      {
+        "path": "dist/src/pi-executor.js",
+        "size": 5883,
+        "mode": 420
+      },
+      {
+        "path": "dist/src/pi-executor.js.map",
+        "size": 6198,
+        "mode": 420
+      },
+      {
+        "path": "dist/src/report.d.ts",
+        "size": 203,
+        "mode": 420
+      },
+      {
+        "path": "dist/src/report.js",
+        "size": 4069,
+        "mode": 420
+      },
+      {
+        "path": "dist/src/report.js.map",
+        "size": 4335,
+        "mode": 420
+      },
+      {
+        "path": "dist/src/store.d.ts",
+        "size": 1498,
+        "mode": 420
+      },
+      {
+        "path": "dist/src/store.js",
+        "size": 15812,
+        "mode": 420
+      },
+      {
+        "path": "dist/src/store.js.map",
+        "size": 17131,
+        "mode": 420
+      },
+      {
+        "path": "dist/src/types.d.ts",
+        "size": 3475,
+        "mode": 420
+      },
+      {
+        "path": "dist/src/types.js",
+        "size": 242,
+        "mode": 420
+      },
+      {
+        "path": "dist/src/types.js.map",
+        "size": 391,
+        "mode": 420
+      },
+      {
+        "path": "docs/VALIDATION.md",
+        "size": 2993,
+        "mode": 420
+      },
+      {
+        "path": "examples/evaluation/cases/experiment-to-lemma.json",
+        "size": 423,
+        "mode": 420
+      },
+      {
+        "path": "examples/evaluation/cases/interruption.json",
+        "size": 566,
+        "mode": 420
+      },
+      {
+        "path": "examples/evaluation/cases/proof-gap.json",
+        "size": 457,
+        "mode": 420
+      },
+      {
+        "path": "examples/evaluation/cases/resume-project.json",
+        "size": 764,
+        "mode": 420
+      },
+      {
+        "path": "examples/evaluation/cases/small-sample.json",
+        "size": 378,
+        "mode": 420
+      },
+      {
+        "path": "examples/evaluation/README.md",
+        "size": 3533,
+        "mode": 420
+      },
+      {
+        "path": "package.json",
+        "size": 1510,
+        "mode": 420
+      },
+      {
+        "path": "prompts/research-charter.md",
+        "size": 2938,
+        "mode": 420
+      },
+      {
+        "path": "skills/mathematical-experiment/SKILL.md",
+        "size": 1912,
+        "mode": 420
+      },
+      {
+        "path": "skills/proof-audit/SKILL.md",
+        "size": 2044,
+        "mode": 420
+      },
+      {
+        "path": "skills/proof-development/SKILL.md",
+        "size": 2118,
+        "mode": 420
+      },
+      {
+        "path": "skills/research-continuity/SKILL.md",
+        "size": 1754,
+        "mode": 420
+      },
+      {
+        "path": "skills/research-orientation/references/automata-case.md",
+        "size": 2122,
+        "mode": 420
+      },
+      {
+        "path": "skills/research-orientation/SKILL.md",
+        "size": 1664,
+        "mode": 420
+      },
+      {
+        "path": "skills/research-strategy/references/concatenation-case.md",
+        "size": 2434,
+        "mode": 420
+      },
+      {
+        "path": "skills/research-strategy/SKILL.md",
+        "size": 2066,
+        "mode": 420
+      },
+      {
+        "path": "skills/research-synthesis/SKILL.md",
+        "size": 2227,
+        "mode": 420
+      }
+    ],
+    "entryCount": 53,
+    "bundled": []
+  }
+}

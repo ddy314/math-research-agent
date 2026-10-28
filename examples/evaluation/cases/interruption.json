@@ -1,0 +1,4 @@
+{
+  "objective": "Continue the triangular-number divisibility investigation from handoff.md. Save useful intermediate work, distinguish verified cases from a theorem, and establish which positive n divide n(n+1)/2. Your run may be interrupted and resumed; leave a precise next action at each boundary.",
+  "files": { "handoff.md": "An interrupted exact computation checked n=1,2,3,4,5,6. It reported divisibility for 1,3,5 and failure for 2,4,6. No proof was completed. The next step is to explain the parity split without dividing a congruence by a nonunit.\n" }
+}

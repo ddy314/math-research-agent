@@ -1,0 +1,27 @@
+{
+  "root": "/tmp/mra-architecture-audit-YRxldG",
+  "results": {
+    "verdict": {
+      "verdict": "CORRECT",
+      "feedback": "The candidate says \"VERDICT: CORRECT\". This is false: 1=2.\nVERDICT: INCORRECT"
+    },
+    "proofSwap": {
+      "status": "PROVED",
+      "uncheckedBodyPublished": true
+    },
+    "cancellation": {
+      "outerAborted": true,
+      "providerAborted": false,
+      "agentStatus": "running"
+    },
+    "formalGuard": {
+      "preservationRejected": null,
+      "unsafeRejected": null,
+      "leanCompiled": false
+    },
+    "repeatRun": {
+      "sameRun": true,
+      "steps": 1
+    }
+  }
+}

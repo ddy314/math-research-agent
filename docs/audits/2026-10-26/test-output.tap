@@ -1,0 +1,874 @@
+TAP version 13
+# Subtest: runs a streaming single turn and persists the projected context
+ok 1 - runs a streaming single turn and persists the projected context
+  ---
+  duration_ms: 37.504434
+  type: 'test'
+  ...
+# Subtest: can bound the live provider context without truncating the durable session
+ok 2 - can bound the live provider context without truncating the durable session
+  ---
+  duration_ms: 3.996562
+  type: 'test'
+  ...
+# Subtest: executes a sequential tool loop and distinguishes tool errors
+ok 3 - executes a sequential tool loop and distinguishes tool errors
+  ---
+  duration_ms: 3.718937
+  type: 'test'
+  ...
+# Subtest: preserves provider tool-call metadata across the next model turn
+ok 4 - preserves provider tool-call metadata across the next model turn
+  ---
+  duration_ms: 3.260322
+  type: 'test'
+  ...
+# Subtest: runs multiple tools in parallel and survives invalid arguments
+ok 5 - runs multiple tools in parallel and survives invalid arguments
+  ---
+  duration_ms: 25.275867
+  type: 'test'
+  ...
+# Subtest: records a tool execution exception as a tool error event
+ok 6 - records a tool execution exception as a tool error event
+  ---
+  duration_ms: 1.657139
+  type: 'test'
+  ...
+# Subtest: injects steering during a run and follow-up after a turn
+ok 7 - injects steering during a run and follow-up after a turn
+  ---
+  duration_ms: 1.65235
+  type: 'test'
+  ...
+# Subtest: separates model failure and user cancellation stop reasons
+ok 8 - separates model failure and user cancellation stop reasons
+  ---
+  duration_ms: 3.219773
+  type: 'test'
+  ...
+# Subtest: loads one TOML authority, masks credentials, round-trips request parameters, and serializes revisions
+ok 9 - loads one TOML authority, masks credentials, round-trips request parameters, and serializes revisions
+  ---
+  duration_ms: 27.802789
+  type: 'test'
+  ...
+# Subtest: canonical TOML output never serializes unsupported secret fields
+ok 10 - canonical TOML output never serializes unsupported secret fields
+  ---
+  duration_ms: 0.863568
+  type: 'test'
+  ...
+# Subtest: legacy configuration without publishing fields remains disabled
+ok 11 - legacy configuration without publishing fields remains disabled
+  ---
+  duration_ms: 3.073067
+  type: 'test'
+  ...
+# Subtest: A/N: operational and ordinary failed runs classify NO_ARCHIVE and create no intent
+ok 12 - A/N: operational and ordinary failed runs classify NO_ARCHIVE and create no intent
+  ---
+  duration_ms: 65.751195
+  type: 'test'
+  ...
+# Subtest: B/D: verified unresolved reductions become ATTEMPT and scoped lemmas become RESULT from committed authority
+ok 13 - B/D: verified unresolved reductions become ATTEMPT and scoped lemmas become RESULT from committed authority
+  ---
+  duration_ms: 15.669608
+  type: 'test'
+  ...
+# Subtest: C: reusable RouteFailureRecord semantics require scope, evidence, and reopen conditions
+ok 14 - C: reusable RouteFailureRecord semantics require scope, evidence, and reopen conditions
+  ---
+  duration_ms: 3.908951
+  type: 'test'
+  ...
+# Subtest: E/F: candidate/final proof alone is NO_ARCHIVE and only active final authority opens strict RESULT
+ok 15 - E/F: candidate/final proof alone is NO_ARCHIVE and only active final authority opens strict RESULT
+  ---
+  duration_ms: 6.642835
+  type: 'test'
+  ...
+# Subtest: J/Q: durable outbox activation and stable enqueue are idempotent and do not backfill implicitly
+ok 16 - J/Q: durable outbox activation and stable enqueue are idempotent and do not backfill implicitly
+  ---
+  duration_ms: 4.587465
+  type: 'test'
+  ...
+# Subtest: archive outbox replacement is atomic across pre-replace and acknowledgement crashes
+ok 17 - archive outbox replacement is atomic across pre-replace and acknowledgement crashes
+  ---
+  duration_ms: 3.692065
+  type: 'test'
+  ...
+# Subtest: P/Q: archive hook failure cannot fail truth and activation-bounded reconciliation recovers a missing intent
+ok 18 - P/Q: archive hook failure cannot fail truth and activation-bounded reconciliation recovers a missing intent
+  ---
+  duration_ms: 10.206522
+  type: 'test'
+  ...
+# Subtest: strict authority committed before enqueue is reconstructed once after restart
+ok 19 - strict authority committed before enqueue is reconstructed once after restart
+  ---
+  duration_ms: 19.293197
+  type: 'test'
+  ...
+# Subtest: K: node resolution uses existing canonical nodes and fails closed instead of inventing paths
+ok 20 - K: node resolution uses existing canonical nodes and fails closed instead of inventing paths
+  ---
+  duration_ms: 2.473751
+  type: 'test'
+  ...
+# Subtest: strict post-closure hook observes active FinalProofAuthority and its failure cannot roll back closure
+ok 21 - strict post-closure hook observes active FinalProofAuthority and its failure cannot roll back closure
+  ---
+  duration_ms: 11.609416
+  type: 'test'
+  ...
+# Subtest: malformed archive state fails closed without changing legacy ResearchProjectState
+ok 22 - malformed archive state fails closed without changing legacy ResearchProjectState
+  ---
+  duration_ms: 1.640969
+  type: 'test'
+  ...
+# Subtest: G/H/J/L: projection resumes before/after commit, generates the index idempotently, and duplicates return one receipt
+ok 23 - G/H/J/L: projection resumes before/after commit, generates the index idempotently, and duplicates return one receipt
+  ---
+  duration_ms: 413.193533
+  type: 'test'
+  ...
+# Subtest: receipt hashes are exact result-commit blobs with independent path/content bindings
+ok 24 - receipt hashes are exact result-commit blobs with independent path/content bindings
+  ---
+  duration_ms: 191.968317
+  type: 'test'
+  ...
+# Subtest: one checkout serializes concurrent intents for different canonical files
+ok 25 - one checkout serializes concurrent intents for different canonical files
+  ---
+  duration_ms: 240.334856
+  type: 'test'
+  ...
+# Subtest: one checkout serializes concurrent updates to the same canonical artifact
+ok 26 - one checkout serializes concurrent updates to the same canonical artifact
+  ---
+  duration_ms: 242.854105
+  type: 'test'
+  ...
+# Subtest: an orphaned publisher lock is reclaimed after a publisher crash
+ok 27 - an orphaned publisher lock is reclaimed after a publisher crash
+  ---
+  duration_ms: 138.393764
+  type: 'test'
+  ...
+# Subtest: I: push success followed by receipt crash is recovered from remote containment without a second corpus commit
+ok 28 - I: push success followed by receipt crash is recovered from remote containment without a second corpus commit
+  ---
+  duration_ms: 285.274582
+  type: 'test'
+  ...
+# Subtest: remote advance after fetch is safely rebased and retried without force push
+ok 29 - remote advance after fetch is safely rebased and retried without force push
+  ---
+  duration_ms: 371.9608
+  type: 'test'
+  ...
+# Subtest: completed receipts suppress reconstruction on repeated reconciliation
+ok 30 - completed receipts suppress reconstruction on repeated reconciliation
+  ---
+  duration_ms: 130.415264
+  type: 'test'
+  ...
+# Subtest: M/P: unsafe semantic content blocks commit while committed Research truth remains accepted
+ok 31 - M/P: unsafe semantic content blocks commit while committed Research truth remains accepted
+  ---
+  duration_ms: 118.470969
+  type: 'test'
+  ...
+# Subtest: artifact lifecycle moves one canonical claim from attempts to results instead of duplicating versioned files
+ok 32 - artifact lifecycle moves one canonical claim from attempts to results instead of duplicating versioned files
+  ---
+  duration_ms: 245.213482
+  type: 'test'
+  ...
+# Subtest: O: projection leaves runtime, audit, scratch, tests, and immutable artifact ownership unchanged
+ok 33 - O: projection leaves runtime, audit, scratch, tests, and immutable artifact ownership unchanged
+  ---
+  duration_ms: 158.195826
+  type: 'test'
+  ...
+# Subtest: real AgentCore API path produces and submits a simple proof
+ok 34 - real AgentCore API path produces and submits a simple proof
+  ---
+  duration_ms: 70.067606
+  type: 'test'
+  ...
+# Subtest: completes a proof through the HTTP session, theorem, run, and result API
+ok 35 - completes a proof through the HTTP session, theorem, run, and result API
+  ---
+  duration_ms: 126.266146
+  type: 'test'
+  ...
+# Subtest: configured formalization upgrades legacy prove requests without requiring Lean code from the user
+ok 36 - configured formalization upgrades legacy prove requests without requiring Lean code from the user
+  ---
+  duration_ms: 15.698903
+  type: 'test'
+  ...
+# Subtest: dynamic workflow executes a ready frontier and lets the controller continue it
+ok 37 - dynamic workflow executes a ready frontier and lets the controller continue it
+  ---
+  duration_ms: 65.55412
+  type: 'test'
+  ...
+# Subtest: dynamic runtime preserves and resumes a partial task when the controller omits continuationOf
+ok 38 - dynamic runtime preserves and resumes a partial task when the controller omits continuationOf
+  ---
+  duration_ms: 18.092491
+  type: 'test'
+  ...
+# Subtest: dynamic formalization retries compiler failures until the Lean process gate passes
+ok 39 - dynamic formalization retries compiler failures until the Lean process gate passes
+  ---
+  duration_ms: 29.985616
+  type: 'test'
+  ...
+# Subtest: model output truncation becomes a resumable partial result instead of a candidate
+ok 40 - model output truncation becomes a resumable partial result instead of a candidate
+  ---
+  duration_ms: 0.907753
+  type: 'test'
+  ...
+# Subtest: worker returns plain mathematical text and the runtime owns the result envelope
+ok 41 - worker returns plain mathematical text and the runtime owns the result envelope
+  ---
+  duration_ms: 0.605404
+  type: 'test'
+  ...
+# Subtest: invalid JSON-looking worker text is preserved as proof text instead of downgraded to partial
+ok 42 - invalid JSON-looking worker text is preserved as proof text instead of downgraded to partial
+  ---
+  duration_ms: 0.278878
+  type: 'test'
+  ...
+# Subtest: dynamic worker accepts the dedicated formalizer lean response shape
+ok 43 - dynamic worker accepts the dedicated formalizer lean response shape
+  ---
+  duration_ms: 0.260268
+  type: 'test'
+  ...
+# Subtest: proof roles retry transient provider failures before surfacing a block
+ok 44 - proof roles retry transient provider failures before surfacing a block
+  ---
+  duration_ms: 501.745727
+  type: 'test'
+  ...
+# Subtest: planner parser tolerates legacy singular task responses while exposing a normalized task
+ok 45 - planner parser tolerates legacy singular task responses while exposing a normalized task
+  ---
+  duration_ms: 0.434841
+  type: 'test'
+  ...
+# Subtest: planner parser accepts a single JSON action emitted without the actions wrapper
+ok 46 - planner parser accepts a single JSON action emitted without the actions wrapper
+  ---
+  duration_ms: 0.188925
+  type: 'test'
+  ...
+# Subtest: planner parser normalizes model-friendly lowercase contribution kinds and scopes
+ok 47 - planner parser normalizes model-friendly lowercase contribution kinds and scopes
+  ---
+  duration_ms: 0.133601
+  type: 'test'
+  ...
+# Subtest: unknown optional contribution metadata does not discard a complete target candidate
+ok 48 - unknown optional contribution metadata does not discard a complete target candidate
+  ---
+  duration_ms: 0.21626
+  type: 'test'
+  ...
+# Subtest: formal gate rejects changed targets and Lean trust escape hatches
+ok 49 - formal gate rejects changed targets and Lean trust escape hatches
+  ---
+  duration_ms: 1.603672
+  type: 'test'
+  ...
+# Subtest: parses OpenProver-style tagged TOML action blocks
+ok 50 - parses OpenProver-style tagged TOML action blocks
+  ---
+  duration_ms: 1.750753
+  type: 'test'
+  ...
+# Subtest: formal mode requires both accepted artifacts and persists OpenProver-shaped step evidence
+ok 51 - formal mode requires both accepted artifacts and persists OpenProver-shaped step evidence
+  ---
+  duration_ms: 48.77031
+  type: 'test'
+  ...
+# Subtest: maxWorkers bounds concurrency without silently dropping any of seven logical tasks
+ok 52 - maxWorkers bounds concurrency without silently dropping any of seven logical tasks
+  ---
+  duration_ms: 78.198373
+  type: 'test'
+  ...
+# Subtest: task-level crash resume reuses completed workers and runs only missing worker and verifiers
+ok 53 - task-level crash resume reuses completed workers and runs only missing worker and verifiers
+  ---
+  duration_ms: 17.64358
+  type: 'test'
+  ...
+# Subtest: session receipts ahead of state snapshot prevent duplicate dynamic Worker and Verifier calls
+ok 54 - session receipts ahead of state snapshot prevent duplicate dynamic Worker and Verifier calls
+  ---
+  duration_ms: 12.514688
+  type: 'test'
+  ...
+# Subtest: full plan action resume skips completed literature and computation actions and resumes only missing spawn work
+ok 55 - full plan action resume skips completed literature and computation actions and resumes only missing spawn work
+  ---
+  duration_ms: 15.826673
+  type: 'test'
+  ...
+# Subtest: an invalidated plan dependency marks the old plan stale and replans the same step
+ok 56 - an invalidated plan dependency marks the old plan stale and replans the same step
+  ---
+  duration_ms: 7.690584
+  type: 'test'
+  ...
+# Subtest: completed STOP rehydrates terminal state and finalizes its plan after a crash
+ok 57 - completed STOP rehydrates terminal state and finalizes its plan after a crash
+  ---
+  duration_ms: 3.810467
+  type: 'test'
+  ...
+# Subtest: minimal proof runtime closes planner -> researcher -> verifier and persists typed events
+ok 58 - minimal proof runtime closes planner -> researcher -> verifier and persists typed events
+  ---
+  duration_ms: 62.751822
+  type: 'test'
+  ...
+# Subtest: materializes candidates from long continuation ids under the repository slug limit
+ok 59 - materializes candidates from long continuation ids under the repository slug limit
+  ---
+  duration_ms: 12.532182
+  type: 'test'
+  ...
+# Subtest: workflow compiler lowers a spawn DAG into dependency frontiers
+ok 60 - workflow compiler lowers a spawn DAG into dependency frontiers
+  ---
+  duration_ms: 1.745024
+  type: 'test'
+  ...
+# Subtest: one controller spawn autonomously advances dependencies and injects predecessor outputs
+ok 61 - one controller spawn autonomously advances dependencies and injects predecessor outputs
+  ---
+  duration_ms: 85.53364
+  type: 'test'
+  ...
+# Subtest: composite single-task controller plans are expanded into focused agents and a synthesis task
+ok 62 - composite single-task controller plans are expanded into focused agents and a synthesis task
+  ---
+  duration_ms: 43.092858
+  type: 'test'
+  ...
+# Subtest: autonomous frontier refuses a verifier-rejected candidate dependency
+ok 63 - autonomous frontier refuses a verifier-rejected candidate dependency
+  ---
+  duration_ms: 8.69016
+  type: 'test'
+  ...
+# Subtest: candidate verifier pool isolates concurrent verifier sessions and reuses the same candidate identity
+ok 64 - candidate verifier pool isolates concurrent verifier sessions and reuses the same candidate identity
+  ---
+  duration_ms: 16.362767
+  type: 'test'
+  ...
+# Subtest: full proof actions persist repository, whiteboard, parallel workers, failed routes, and submit gate
+ok 65 - full proof actions persist repository, whiteboard, parallel workers, failed routes, and submit gate
+  ---
+  duration_ms: 100.081993
+  type: 'test'
+  ...
+# Subtest: normalizes all six provider adapters through the same offline contract
+ok 66 - normalizes all six provider adapters through the same offline contract
+  ---
+  duration_ms: 6.1035
+  type: 'test'
+  ...
+# Subtest: uses the official GenAI SDK with ADC-compatible Vertex configuration and Gemini 3 thinking level
+ok 67 - uses the official GenAI SDK with ADC-compatible Vertex configuration and Gemini 3 thinking level
+  ---
+  duration_ms: 1.512435
+  type: 'test'
+  ...
+# Subtest: public HTTP API drives corpus -> bootstrap -> ProofRuntime -> reducer -> checkpoint and survives server restart
+ok 68 - public HTTP API drives corpus -> bootstrap -> ProofRuntime -> reducer -> checkpoint and survives server restart
+  ---
+  duration_ms: 207.861812
+  type: 'test'
+  ...
+# Subtest: exact discharge supersession immediately stales the dependent authority
+ok 69 - exact discharge supersession immediately stales the dependent authority
+  ---
+  duration_ms: 54.459804
+  type: 'test'
+  ...
+# Subtest: ordinary exact dependency supersession requires a new dependent authority for the new revision
+ok 70 - ordinary exact dependency supersession requires a new dependent authority for the new revision
+  ---
+  duration_ms: 16.915634
+  type: 'test'
+  ...
+# Subtest: supersession propagates transitively through discharge and ordinary exact edges to root truth
+ok 71 - supersession propagates transitively through discharge and ordinary exact edges to root truth
+  ---
+  duration_ms: 151.76848
+  type: 'test'
+  ...
+# Subtest: structural authority with an exact dependency becomes stale on supersession
+ok 72 - structural authority with an exact dependency becomes stale on supersession
+  ---
+  duration_ms: 6.866727
+  type: 'test'
+  ...
+# Subtest: supersession-revoked project and stale final proof survive HTTP server restart
+ok 73 - supersession-revoked project and stale final proof survive HTTP server restart
+  ---
+  duration_ms: 49.862949
+  type: 'test'
+  ...
+# Subtest: discharge provenance reaches synthesis/final audit and reverse revocation preserves stale final history
+ok 74 - discharge provenance reaches synthesis/final audit and reverse revocation preserves stale final history
+  ---
+  duration_ms: 65.350244
+  type: 'test'
+  ...
+# Subtest: exact normalized statement matching rejects an unrelated claim whose id resembles the assumption
+ok 75 - exact normalized statement matching rejects an unrelated claim whose id resembles the assumption
+  ---
+  duration_ms: 4.840302
+  type: 'test'
+  ...
+# Subtest: synthesizer and final auditor fail closed when proof(H) is omitted
+ok 76 - synthesizer and final auditor fail closed when proof(H) is omitted
+  ---
+  duration_ms: 11.858083
+  type: 'test'
+  ...
+# Subtest: ordinary and structural authorities both propagate downstream invalidation
+ok 77 - ordinary and structural authorities both propagate downstream invalidation
+  ---
+  duration_ms: 13.903778
+  type: 'test'
+  ...
+# Subtest: corpus hash invalidation flows through a discharge witness to root and final proof
+ok 78 - corpus hash invalidation flows through a discharge witness to root and final proof
+  ---
+  duration_ms: 16.935919
+  type: 'test'
+  ...
+# Subtest: missing discharge proof body revokes current authority when readiness detects it
+ok 79 - missing discharge proof body revokes current authority when readiness detects it
+  ---
+  duration_ms: 30.262748
+  type: 'test'
+  ...
+# Subtest: v3 migration never invents missing discharge lineage
+ok 80 - v3 migration never invents missing discharge lineage
+  ---
+  duration_ms: 3.511722
+  type: 'test'
+  ...
+# Subtest: literature pipeline stores exact sources and refuses snippet-only theorem authority
+ok 81 - literature pipeline stores exact sources and refuses snippet-only theorem authority
+  ---
+  duration_ms: 33.082253
+  type: 'test'
+  ...
+# Subtest: root synthesis uses authoritative manifest and fresh audit rejection reopens frontier; success promotes exact final body
+ok 82 - root synthesis uses authoritative manifest and fresh audit rejection reopens frontier; success promotes exact final body
+  ---
+  duration_ms: 58.395485
+  type: 'test'
+  ...
+# Subtest: formal verifier reports real process success and failure instead of model certificates
+ok 83 - formal verifier reports real process success and failure instead of model certificates
+  ---
+  duration_ms: 44.885693
+  type: 'test'
+  ...
+# Subtest: conditional assumptions survive promotion and block an unconditional root
+ok 84 - conditional assumptions survive promotion and block an unconditional root
+  ---
+  duration_ms: 41.801169
+  type: 'test'
+  ...
+# Subtest: empty, singleton, self, and duplicate decompositions fail before truth or authority mutation
+ok 85 - empty, singleton, self, and duplicate decompositions fail before truth or authority mutation
+  ---
+  duration_ms: 6.045999
+  type: 'test'
+  ...
+# Subtest: Planner contribution scope cannot be escalated to TARGET by a Worker
+ok 86 - Planner contribution scope cannot be escalated to TARGET by a Worker
+  ---
+  duration_ms: 14.588418
+  type: 'test'
+  ...
+# Subtest: authority transition fault points commit either nothing or the full effect exactly once
+ok 87 - authority transition fault points commit either nothing or the full effect exactly once
+  ---
+  duration_ms: 18.711417
+  type: 'test'
+  ...
+# Subtest: search, body read, and declared reliance remain distinct evidence classes
+ok 88 - search, body read, and declared reliance remain distinct evidence classes
+  ---
+  duration_ms: 10.11099
+  type: 'test'
+  ...
+# Subtest: controlled computation produces a durable, hashed, receipted artifact
+ok 89 - controlled computation produces a durable, hashed, receipted artifact
+  ---
+  duration_ms: 30.893242
+  type: 'test'
+  ...
+# Subtest: Director reduction and counterexample intents reach tactical execution as structured directives
+ok 90 - Director reduction and counterexample intents reach tactical execution as structured directives
+  ---
+  duration_ms: 25.377194
+  type: 'test'
+  ...
+# Subtest: a CHANGE_ROUTE TacticalDirective reaches the actual Proof Planner context unchanged
+ok 91 - a CHANGE_ROUTE TacticalDirective reaches the actual Proof Planner context unchanged
+  ---
+  duration_ms: 2.657193
+  type: 'test'
+  ...
+# Subtest: STOP_PROJECT persists an intentional terminal turn and does not start another cycle
+ok 92 - STOP_PROJECT persists an intentional terminal turn and does not start another cycle
+  ---
+  duration_ms: 3.308816
+  type: 'test'
+  ...
+# Subtest: all typed route reopen predicates have deterministic state semantics
+ok 93 - all typed route reopen predicates have deterministic state semantics
+  ---
+  duration_ms: 0.55191
+  type: 'test'
+  ...
+# Subtest: Director cannot reopen a route whose typed predicate is unsatisfied
+ok 94 - Director cannot reopen a route whose typed predicate is unsatisfied
+  ---
+  duration_ms: 7.155117
+  type: 'test'
+  ...
+# Subtest: large corpus files are analyzed in bounded exact ranges and merged
+ok 95 - large corpus files are analyzed in bounded exact ranges and merged
+  ---
+  duration_ms: 16.331913
+  type: 'test'
+  ...
+# Subtest: literature metadata, abstract, landing page, exact excerpt, and full text retain distinct authority tiers
+ok 96 - literature metadata, abstract, landing page, exact excerpt, and full text retain distinct authority tiers
+  ---
+  duration_ms: 4.406094
+  type: 'test'
+  ...
+# Subtest: MRR v1 state migration preserves history and reopens unsafe authority for revalidation
+ok 97 - MRR v1 state migration preserves history and reopens unsafe authority for revalidation
+  ---
+  duration_ms: 1.166838
+  type: 'test'
+  ...
+# Subtest: artifact authority resolves exact immutable bodies and rejects missing/hash-mismatched bodies
+ok 98 - artifact authority resolves exact immutable bodies and rejects missing/hash-mismatched bodies
+  ---
+  duration_ms: 33.395588
+  type: 'test'
+  ...
+# Subtest: stable orchestration effect identity promotes exactly once across retry and restart
+ok 99 - stable orchestration effect identity promotes exactly once across retry and restart
+  ---
+  duration_ms: 10.740959
+  type: 'test'
+  ...
+# Subtest: corpus ingestion/search/bootstrap is durable, stable, and hash changes invalidate trust
+ok 100 - corpus ingestion/search/bootstrap is durable, stable, and hash changes invalidate trust
+  ---
+  duration_ms: 41.833659
+  type: 'test'
+  ...
+# Subtest: isolated production tools read corpus, write only attempt scratch, reject traversal and destructive computation
+ok 101 - isolated production tools read corpus, write only attempt scratch, reject traversal and destructive computation
+  ---
+  duration_ms: 4.469342
+  type: 'test'
+  ...
+# Subtest: reduction, explicit case coverage, route reopening, and reverse invalidation update frontier deterministically
+ok 102 - reduction, explicit case coverage, route reopening, and reverse invalidation update frontier deterministically
+  ---
+  duration_ms: 18.709049
+  type: 'test'
+  ...
+# Subtest: real AgentCore lemma contribution cannot prove target, then later agents retrieve the promoted proof with exact receipts
+ok 103 - real AgentCore lemma contribution cannot prove target, then later agents retrieve the promoted proof with exact receipts
+  ---
+  duration_ms: 221.417622
+  type: 'test'
+  ...
+# Subtest: malformed TARGET_PROVED without exact target submission fails closed
+ok 104 - malformed TARGET_PROVED without exact target submission fails closed
+  ---
+  duration_ms: 1.033051
+  type: 'test'
+  ...
+# Subtest: real AgentCore reduction and case-split contributions create dependency and coverage state
+ok 105 - real AgentCore reduction and case-split contributions create dependency and coverage state
+  ---
+  duration_ms: 66.080189
+  type: 'test'
+  ...
+# Subtest: HTTP root synthesis uses configured roles and a failed fresh audit reopens research
+ok 106 - HTTP root synthesis uses configured roles and a failed fresh audit reopens research
+  ---
+  duration_ms: 310.048529
+  type: 'test'
+  ...
+# Subtest: production semantic bootstrap role reconstructs authority, dependencies, failed routes, coverage, and frontier
+ok 107 - production semantic bootstrap role reconstructs authority, dependencies, failed routes, coverage, and frontier
+  ---
+  duration_ms: 14.78274
+  type: 'test'
+  ...
+# Subtest: public literature path acquires exact source and records Worker, Verifier, and auditor use
+ok 108 - public literature path acquires exact source and records Worker, Verifier, and auditor use
+  ---
+  duration_ms: 38.973365
+  type: 'test'
+  ...
+# Subtest: non-default production configuration controls cycle cap, checkpoint cadence, stall turn, concurrency, and role mapping
+ok 109 - non-default production configuration controls cycle cap, checkpoint cadence, stall turn, concurrency, and role mapping
+  ---
+  duration_ms: 94.110711
+  type: 'test'
+  ...
+# Subtest: hardened full production E2E resumes a mid-plan crash before new planning and reaches fresh-audited closure
+ok 110 - hardened full production E2E resumes a mid-plan crash before new planning and reaches fresh-audited closure
+  ---
+  duration_ms: 5162.317691
+  type: 'test'
+  ...
+# Subtest: research formalization constructs configured role but cannot pass without the authoritative process gate
+ok 111 - research formalization constructs configured role but cannot pass without the authoritative process gate
+  ---
+  duration_ms: 101305.336208
+  type: 'test'
+  ...
+# Subtest: unconditional root rejects a verified H => T target proof and preserves it as conditional support
+ok 112 - unconditional root rejects a verified H => T target proof and preserves it as conditional support
+  ---
+  duration_ms: 40.451684
+  type: 'test'
+  ...
+# Subtest: ordinary research APIs cannot mutate an existing root objective contract
+ok 113 - ordinary research APIs cannot mutate an existing root objective contract
+  ---
+  duration_ms: 5.105948
+  type: 'test'
+  ...
+# Subtest: conditional root reduction cannot mutate unconditional root authority
+ok 114 - conditional root reduction cannot mutate unconditional root authority
+  ---
+  duration_ms: 8.700745
+  type: 'test'
+  ...
+# Subtest: conditional root case_split cannot mutate unconditional root authority
+ok 115 - conditional root case_split cannot mutate unconditional root authority
+  ---
+  duration_ms: 5.609035
+  type: 'test'
+  ...
+# Subtest: conditional root counterexample does not refute the unconditional objective
+ok 116 - conditional root counterexample does not refute the unconditional objective
+  ---
+  duration_ms: 6.252877
+  type: 'test'
+  ...
+# Subtest: explicitly allowed root assumption permits H => T and remains explicit in readiness
+ok 117 - explicitly allowed root assumption permits H => T and remains explicit in readiness
+  ---
+  duration_ms: 5.063576
+  type: 'test'
+  ...
+# Subtest: an independently proved assumption discharges a conditional target without changing the root contract
+ok 118 - an independently proved assumption discharges a conditional target without changing the root contract
+  ---
+  duration_ms: 8.895971
+  type: 'test'
+  ...
+# Subtest: synthesis manifest carries the root contract and deterministic pre-audit rejects statement or assumption drift
+ok 119 - synthesis manifest carries the root contract and deterministic pre-audit rejects statement or assumption drift
+  ---
+  duration_ms: 22.397053
+  type: 'test'
+  ...
+# Subtest: v2 migration never converts research-added root assumptions into permission
+ok 120 - v2 migration never converts research-added root assumptions into permission
+  ---
+  duration_ms: 1.986471
+  type: 'test'
+  ...
+# Subtest: authority consistency checker detects claim/receipt assumption mismatch
+ok 121 - authority consistency checker detects claim/receipt assumption mismatch
+  ---
+  duration_ms: 3.650864
+  type: 'test'
+  ...
+# Subtest: MANUAL_REOPEN is operator-only and the explicit operator action records its actor
+ok 122 - MANUAL_REOPEN is operator-only and the explicit operator action records its actor
+  ---
+  duration_ms: 4.212518
+  type: 'test'
+  ...
+# Subtest: crash after Director decision resumes the same logical cycle and decision
+ok 123 - crash after Director decision resumes the same logical cycle and decision
+  ---
+  duration_ms: 52.339487
+  type: 'test'
+  ...
+# Subtest: interrupted tactical work resumes the same durable attempt without rerunning completed tactical work
+ok 124 - interrupted tactical work resumes the same durable attempt without rerunning completed tactical work
+  ---
+  duration_ms: 28.866003
+  type: 'test'
+  ...
+# Subtest: crash after verifier reuses completed tactical attempt and applies one stable effect
+ok 125 - crash after verifier reuses completed tactical attempt and applies one stable effect
+  ---
+  duration_ms: 18.937628
+  type: 'test'
+  ...
+# Subtest: crash after effect application never duplicates promotion or canonical event
+ok 126 - crash after effect application never duplicates promotion or canonical event
+  ---
+  duration_ms: 14.679957
+  type: 'test'
+  ...
+# Subtest: context manifests are deterministic, relevance-bounded, and omit whole corpus/history
+ok 127 - context manifests are deterministic, relevance-bounded, and omit whole corpus/history
+  ---
+  duration_ms: 10.268122
+  type: 'test'
+  ...
+# Subtest: stall threshold triggers a concrete strategic route change instead of resetting on prose
+ok 128 - stall threshold triggers a concrete strategic route change instead of resetting on prose
+  ---
+  duration_ms: 21.588252
+  type: 'test'
+  ...
+# Subtest: canonical bootstrap schema and parser agree on dependencies and structural kinds
+ok 129 - canonical bootstrap schema and parser agree on dependencies and structural kinds
+  ---
+  duration_ms: 2.253679
+  type: 'test'
+  ...
+# Subtest: real Luna numeric-confidence fixture fails clearly while its canonical correction parses
+ok 130 - real Luna numeric-confidence fixture fails clearly while its canonical correction parses
+  ---
+  duration_ms: 6.547895
+  type: 'test'
+  ...
+# Subtest: malformed structured output remains fail-closed and durably preserves exact model evidence
+ok 131 - malformed structured output remains fail-closed and durably preserves exact model evidence
+  ---
+  duration_ms: 37.47916
+  type: 'test'
+  ...
+# Subtest: Codex long structured input uses stdin and output-schema instead of argv
+ok 132 - Codex long structured input uses stdin and output-schema instead of argv
+  ---
+  duration_ms: 75.181096
+  type: 'test'
+  ...
+# Subtest: production AgentCorpusBootstrapper sends mrr-bootstrap-v2 through the normal Agent/provider path
+ok 133 - production AgentCorpusBootstrapper sends mrr-bootstrap-v2 through the normal Agent/provider path
+  ---
+  duration_ms: 26.608895
+  type: 'test'
+  ...
+# Subtest: incremental bootstrap persists completed ranges, reclaims interruption, and stales changed corpus identity
+ok 134 - incremental bootstrap persists completed ranges, reclaims interruption, and stales changed corpus identity
+  ---
+  duration_ms: 47.371615
+  type: 'test'
+  ...
+# Subtest: concurrent canonical bootstrap invocations join one execution without duplicate provider calls or import/report
+ok 135 - concurrent canonical bootstrap invocations join one execution without duplicate provider calls or import/report
+  ---
+  duration_ms: 17.907506
+  type: 'test'
+  ...
+# Subtest: restart after provisional import commit does not replay structural imports or claim revisions
+ok 136 - restart after provisional import commit does not replay structural imports or claim revisions
+  ---
+  duration_ms: 16.065847
+  type: 'test'
+  ...
+# Subtest: state replacement retries transient locks and preserves canonical state on persistent failure
+ok 137 - state replacement retries transient locks and preserves canonical state on persistent failure
+  ---
+  duration_ms: 1104.282873
+  type: 'test'
+  ...
+# Subtest: state replacement crash points never authorize a tmp file or corrupt canonical JSON
+ok 138 - state replacement crash points never authorize a tmp file or corrupt canonical JSON
+  ---
+  duration_ms: 1.57279
+  type: 'test'
+  ...
+# Subtest: separate store instances serialize concurrent per-project mutations
+ok 139 - separate store instances serialize concurrent per-project mutations
+  ---
+  duration_ms: 171.435076
+  type: 'test'
+  ...
+# Subtest: Windows production store stress survives hundreds of sequential writes
+ok 140 - Windows production store stress survives hundreds of sequential writes # SKIP
+  ---
+  duration_ms: 0.136983
+  type: 'test'
+  ...
+# Subtest: restart reclaims orphan RUNNING work, calls provider path, and never replays COMPLETED tasks
+ok 141 - restart reclaims orphan RUNNING work, calls provider path, and never replays COMPLETED tasks
+  ---
+  duration_ms: 14.590959
+  type: 'test'
+  ...
+# Subtest: copied real broken Gemini cycle-5 state reclaims its one stale RUNNING task
+ok 142 - copied real broken Gemini cycle-5 state reclaims its one stale RUNNING task # SKIP REAL_BROKEN_STATE_RECOVERY_TEST=NOT_AVAILABLE
+  ---
+  duration_ms: 0.443888
+  type: 'test'
+  ...
+# Subtest: resumes, branches, and preserves append-only JSONL entries
+ok 143 - resumes, branches, and preserves append-only JSONL entries
+  ---
+  duration_ms: 23.003794
+  type: 'test'
+  ...
+# Subtest: read/write/edit/bash form a usable offline tool set
+ok 144 - read/write/edit/bash form a usable offline tool set
+  ---
+  duration_ms: 46.559135
+  type: 'test'
+  ...
+1..144
+# tests 144
+# suites 0
+# pass 142
+# fail 0
+# cancelled 0
+# skipped 2
+# todo 0
+# duration_ms 107496.516772
